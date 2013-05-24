@@ -374,7 +374,7 @@ class portCollector : public UI
 //		descriptor->Label = strdup(fPluginName.c_str());
 //		descriptor->UniqueID = makeID(fPluginName.c_str());
 		descriptor->Properties = LADSPA_PROPERTY_HARD_RT_CAPABLE;
-		descriptor->Name = "ZamAutoSat;
+		descriptor->Name = "ZamAutoSat";
 //		descriptor->Name = strdup(fPluginName.c_str());
 		descriptor->Maker = "Damien Zammit";
 		descriptor->Copyright = "2013";
