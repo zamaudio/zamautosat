@@ -10,4 +10,6 @@ Faust is required to compile this as LV2 or Ladspa plugin.
     or 
   make ladspa
 
-  sudo make install
+  sudo make install-lv2
+    or
+  sudo make install-ladspa
