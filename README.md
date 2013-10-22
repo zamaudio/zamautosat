@@ -4,12 +4,6 @@ zamautosat
 ZamAutoSat - Auto saturation plugin.
 
 Using simple absolute value algorithm.
-Faust is required to compile this as LV2 or Ladspa plugin.
+Faust >=0.9.62 is required to compile this LADSPA plugin.
 
-  make lv2 
-    or 
-  make ladspa
-
-  sudo make install-lv2
-    or
-  sudo make install-ladspa
+  make && sudo make install
