@@ -3,7 +3,7 @@ PREFIX=/usr
 all: zamautosat.so
 
 zamautosat.so:
-	g++ -O3 -march=native -mfpmath=sse -msse -msse2 -ffast-math -fPIC -shared -Dmydsp=zamautosat -I/usr/lib zamautosat.dsp.cpp -o zamautosat.so
+	g++ -O3 -mfpmath=sse -msse -msse2 -ffast-math -fPIC -shared -Dmydsp=zamautosat -I/usr/lib zamautosat.dsp.cpp -o zamautosat.so
 
 install:
 	mkdir -p $(PREFIX)/lib/ladspa
