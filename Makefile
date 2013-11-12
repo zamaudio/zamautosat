@@ -1,17 +1,16 @@
-all: ladspa/zamautosat.so
+PREFIX=/usr
 
-ladspa/zamautosat.so: ladspa/zamautosat.dsp.cpp
-	./compileladspa zamautosat.dsp
+all: zamautosat.so
 
-ladspa/zamautosat.dsp.cpp:
-	./genladspa zamautosat.dsp
+zamautosat.so:
+	g++ -O3 -march=native -mfpmath=sse -msse -msse2 -ffast-math -fPIC -shared -Dmydsp=zamautosat -I/usr/lib zamautosat.dsp.cpp -o zamautosat.so
 
 install:
-	mkdir -p /usr/local/lib/ladspa
-	cp -a ladspa/zamautosat.so /usr/local/lib/ladspa
+	mkdir -p $(PREFIX)/lib/ladspa
+	cp zamautosat.so $(PREFIX)/lib/ladspa
 
 uninstall:
-	rm -f /usr/local/lib/ladspa/zamautosat.so
+	rm -f $(PREFIX)/lib/ladspa/zamautosat.so
 
 clean:
-	rm -f ladspa/zamautosat.so
+	rm -f zamautosat.so

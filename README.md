@@ -16,7 +16,7 @@ http://www.zamaudio.com/?p=870
 
 Install instructions:
 
-Faust >=0.9.62 is required to compile this LADSPA plugin plus the LADSPA SDK
+Faust >=0.9.46 is required to compile this LADSPA plugin plus the LADSPA SDK
 
 	make && sudo make install
 

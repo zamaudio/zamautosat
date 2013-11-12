@@ -5,7 +5,7 @@
 // version: "2.1"
 // license: "GPLv2"
 //
-// Code generated with Faust 0.9.62 (http://faust.grame.fr)
+// Code generated with Faust 62 (backported to 46)
 //-----------------------------------------------------
 /* link with  */
 /************************************************************************
