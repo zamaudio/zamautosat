@@ -1,4 +1,4 @@
-PREFIX=/usr/local
+PREFIX ?= /usr/local
 
 all: zamautosat.so
 
@@ -7,7 +7,7 @@ zamautosat.so:
 
 install:
 	install -d $(DESTDIR)$(PREFIX)/lib/ladspa
-	install zamautosat.so $(DESTDIR)$(PREFIX)/lib/ladspa
+	install zamautosat.so -t $(DESTDIR)$(PREFIX)/lib/ladspa
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/lib/ladspa/zamautosat.so
