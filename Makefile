@@ -1,16 +1,18 @@
 PREFIX ?= /usr/local
+LIBDIR ?= lib
+OPTIMIZATIONS ?= -O3 -ffast-math
 
 all: zamautosat.so
 
 zamautosat.so:
-	g++ -O3 -ffast-math -fPIC -shared -Dmydsp=zamautosat -I/usr/lib zamautosat.dsp.cpp -o zamautosat.so
+	$(CXX) $(OPTIMIZATIONS) -fPIC -shared -Dmydsp=zamautosat zamautosat.dsp.cpp -o zamautosat.so
 
 install:
-	install -d $(DESTDIR)$(PREFIX)/lib/ladspa
-	install zamautosat.so -t $(DESTDIR)$(PREFIX)/lib/ladspa
+	install -d $(DESTDIR)$(PREFIX)/$(LIBDIR)/ladspa
+	install zamautosat.so -t $(DESTDIR)$(PREFIX)/$(LIBDIR)/ladspa
 
 uninstall:
-	rm -f $(DESTDIR)$(PREFIX)/lib/ladspa/zamautosat.so
+	rm -f $(DESTDIR)$(PREFIX)$(LIBDIR)/ladspa/zamautosat.so
 
 clean:
 	rm -f zamautosat.so
