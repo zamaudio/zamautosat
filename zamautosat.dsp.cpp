@@ -3,7 +3,7 @@
 // author: "Damien Zammit"
 // copyright: "2013"
 // version: "2.1"
-// license: "GPLv2"
+// license: "GPLv2+"
 //
 // Code generated with Faust 62 (backported to 46)
 //-----------------------------------------------------
@@ -93,7 +93,7 @@ class mydsp : public dsp {
 		m->declare("author", "Damien Zammit");
 		m->declare("copyright", "2013");
 		m->declare("version", "2.1");
-		m->declare("license", "GPLv2");
+		m->declare("license", "GPLv2+");
 	}
 
 	virtual int getNumInputs() 	{ return 1; }
